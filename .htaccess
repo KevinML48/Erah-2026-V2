@@ -27,3 +27,13 @@ AddOutputFilterByType DEFLATE application/rss+xml
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 ## Enable compression ##
+
+# Supprimer .html des URLs
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Si l'URL correspond à un fichier .html existant, on le réécrit sans l'extension
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^([^/]+)$ $1.html [L]
+</IfModule>
