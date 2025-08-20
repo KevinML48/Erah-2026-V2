@@ -323,13 +323,20 @@
 
 												<div class="tt-clipper-bg">
 													<video loop muted autoplay playsinline preload="metadata"
-														poster="assets/img/mende-1.jpg">
-														<source src="assets/vids/trailer-lozere.mp4"
-															data-src="assets/vids/trailer-lozere.mp4" type="video/mp4">
-														<source src="assets/vids/trailer-lozere.webm"
-															data-src="assets/vids/trailer-lozere.webm"
-															type="video/webm">
-													</video>
+       poster="assets/img/mende-1.jpg">
+  <source src="assets/vids/trailer-lozere.mp4" 
+          data-src="assets/vids/trailer-lozere.mp4" 
+          type="video/mp4">
+  <source src="assets/vids/trailer-lozere.webm" 
+          data-src="assets/vids/trailer-lozere.webm" 
+          type="video/webm">
+  
+  <!-- Sous-titres en français -->
+  <track src="assets/vids/trailer-lozere-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  
+  <!-- (Optionnel) Sous-titres en anglais -->
+  <track src="assets/vids/trailer-lozere-en.vtt" kind="captions" srclang="en" label="English">
+</video>
 												</div>
 
 												<div class="tt-clipper-content">
