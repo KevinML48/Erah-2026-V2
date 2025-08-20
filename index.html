@@ -2,61 +2,68 @@
 <html lang="fr">
 
 <head>
-    <title>ERAH Esport</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Titre et SEO -->
+  <title>ERAH Esport</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{PAGE_DESCRIPTION}}">
+  <meta name="keywords" content="{{PAGE_KEYWORDS}}">
+  <meta name="author" content="ERAH Esport">
 
-    <!-- Meta SEO -->
-    <meta name="description" content="Bienvenue sur le site officiel d’ERAH Esport : actualités, équipes, compétitions et projets gaming en Lozère et au-delà.">
-    <meta name="keywords" content="ERAH Esport, esport France, équipe esport, gaming Lozère, compétitions, Valorant, Call of Duty, Rocket League">
-    <meta name="author" content="ERAH Esport">
+  <!-- Favicon -->
+  <link rel="icon" href="assets/img/logo.png" type="image/png" sizes="512x512">
+  <link rel="apple-touch-icon" href="assets/img/logo.png">
 
-    <!-- Favicon -->
-    <link rel="icon" href="https://erah-esport.fr/assets/img/logo.png" type="image/png" sizes="512x512">
-    <link rel="apple-touch-icon" href="https://erah-esport.fr/assets/img/logo.png">
+  <!-- Schema.org pour Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ERAH Esport",
+    "url": "https://erah-esport.fr",
+    "logo": "https://erah-esport.fr/assets/img/logo.png",
+    "sameAs": [
+      "https://www.twitch.tv/erah_association",
+      "https://www.instagram.com/erahesport/",
+      "https://x.com/ErahEsport",
+      "https://discord.gg/9G89kkSjRx"
+    ]
+  }
+  </script>
 
-    <!-- Logo officiel pour Google (Schema.org) -->
-    <script type="application/ld+json">
-	{
-  	"@context": "https://schema.org",
-  	"@type": "Organization",
-  	"name": "ERAH Esport",
-  	"url": "https://erah-esport.fr",
-  	"logo": "https://erah-esport.fr/assets/img/logo.png",
-  	"sameAs": [
-    	"https://www.twitch.tv/erah_association",
-    	"https://www.instagram.com/erahesport/",
-    	"https://x.com/ErahEsport",
-    	"https://discord.gg/9G89kkSjRx"
-  		]
-	}
-    </script>
+  <!-- Préconnexion & polices Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Préchargement police critique -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+  <!-- CSS principaux (ordre important) -->
+  <link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/vendor/fancybox/css/fancybox.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/vendor/swiper/css/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/css/helper.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/css/theme.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/css/theme-light.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
     <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/vendor/fancybox/css/fancybox.css">
     <link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/helper.css">
     <link rel="stylesheet" href="assets/css/theme.css">
     <link rel="stylesheet" href="assets/css/theme-light.css">
+  </noscript>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9C6F8VG4D"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-H9C6F8VG4D');
-    </script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9C6F8VG4D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H9C6F8VG4D', { 'anonymize_ip': true });
+  </script>
 </head>
-
-
 
 
 <style>
@@ -119,7 +126,7 @@
 					<div class="tt-logo">
 						<a href="index.html" class="tt-magnetic-item">
 							<img src="assets/img/logo-light.png" class="tt-logo-light" alt="Logo">
-							<img src="assets/img/logo-dark.png" class="tt-logo-dark" alt="Logo">
+							<img src="assets/img/logo-dark.jpg" class="tt-logo-dark" alt="Logo">
 						</a>
 					</div>
 
@@ -238,16 +245,24 @@
 				class="ph-full ph-full-m ph-center ph-cap-xxxxlg ph-image-parallax ph-caption-parallax">
 
 
-				<div class="ph-video ph-video-grayscale ph-video-cover-1">
-					<div class="ph-video-inner">
-						<video loop muted autoplay playsinline preload="metadata" 
-       						poster="assets/img/galerie/Hoplan-2025-2.webp" style="">
-  							<source src="assets/vids/Trailer_site.mp4" type="video/mp4">
-  							<track src="assets/videos/hoplan-fr.vtt" kind="captions" srclang="fr" label="Français" default>
-  							<track src="assets/videos/hoplan-en.vtt" kind="captions" srclang="en" label="English">
-						</video>
-					</div>
-				</div>
+				<div class="ph-video ph-video-cover-1">
+  <div class="ph-video-inner">
+    <!-- Vidéo avec poster léger -->
+<video id="hero-video"
+       loop
+       muted
+       autoplay
+       playsinline
+       preload="none"
+       poster="assets/img/galerie/Hoplan-2025-2.webp"
+       style="width:100%; height:100%; object-fit:cover;">
+  <source src="assets/vids/Trailer_site.mp4" type="video/mp4">
+  <track src="assets/vids/hoplan-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/hoplan-en.vtt" kind="captions" srclang="en" label="English">
+</video>
+
+  </div>
+</div>
 
 				<div class="page-header-inner tt-wrap">
 
@@ -486,10 +501,10 @@
   <source src="assets/vids/galerie-video/intervention.webm" data-src="assets/vids/galerie-video/intervention.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/InfinityUP-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/InfinityUP-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/InfinityUP-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/InfinityUP-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 
 											</div>
@@ -940,7 +955,7 @@
 
 
 								<div class="tt-clipper-bg">
-									<video loop muted autoplay playsinline preload="metadata" poster="assets/img/fond-vidéo.png">
+									<video loop muted autoplay playsinline preload="metadata" poster="assets/img/fond-vidéo.jpg">
   <source src="assets/vids/erah-aca.mp4" data-src="assets/vids/erah-aca.mp4" type="video/mp4">
   <source src="assets/vids/erah-aca.webm" data-src="assets/vids/erah-aca.webm" type="video/webm">
 
@@ -1473,7 +1488,7 @@
 									<div class="tt-footer-logo">
 										<a href="index.html" class="tt-magnetic-item">
 											<img src="assets/img/logo-light.png" class="tt-logo-light" loading="lazy"
-												alt="Logo"> <img src="assets/img/logo-dark.png" class="tt-logo-dark"
+												alt="Logo"> <img src="assets/img/logo-dark.jpg" class="tt-logo-dark"
 												loading="lazy" alt="Logo"> </a>
 									</div>
 								</li>
@@ -1499,9 +1514,21 @@
 	</main>
 
 
+	<!-- Lazyload vidéo hero -->
+	<script defer>
+	  window.addEventListener("load", () => {
+	    const video = document.getElementById("hero-video");
+	    if(video){
+	      const source = document.createElement("source");
+	      source.src = "assets/vids/Trailer_site_light.mp4"; // version optimisée < 2Mo
+	      source.type = "video/mp4";
+	      video.appendChild(source);
+	      video.load();
+	    }
+	  });
+	</script>
 
-
-
+	<!-- Librairies JS -->
 	<script src="assets/vendor/jquery/jquery.min.js" defer></script>
 	<script src="assets/vendor/gsap/gsap.min.js" defer></script>
 	<script src="assets/vendor/gsap/ScrollToPlugin.min.js" defer></script>
@@ -1513,6 +1540,7 @@
 	<script src="assets/vendor/fancybox/js/fancybox.umd.js" defer></script>
 	<script src="assets/vendor/swiper/js/swiper-bundle.min.js" defer></script>
 	<script src="assets/js/theme.js" defer></script>
+
 
 
 
