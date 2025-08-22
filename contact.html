@@ -370,65 +370,66 @@
 
 							<div class="tt-col-xl-7">
 
-								<form id="tt-contact-form" class="tt-form tt-form-creative tt-form-lg" name="contact"
-									method="POST" data-netlify="true">
+<form id="tt-contact-form" class="tt-form tt-form-creative tt-form-lg"
+      name="contact" method="POST" data-netlify="true"
+      netlify-honeypot="bot-field" action="/contact.html">
 
+  
+  <!-- Honeypot anti-spam -->
+  <p class="hidden">
+    <label>Ne pas remplir si humain <input name="bot-field"></label>
+  </p>
 
-									<input type="hidden" name="form-name" value="contact">
+  <!-- Input caché pour Netlify -->
+  <input type="hidden" name="form-name" value="contact">
 
+  <div id="tt-contact-form-messages" role="alert">
+    <div class="tt-cfm-inner"></div>
+    <div class="tt-cfm-close hide-cursor"><i class="fa-solid fa-xmark"></i></div>
+  </div>
 
-									<div id="tt-contact-form-messages" role="alert">
-										<div class="tt-cfm-inner"></div>
-										<div class="tt-cfm-close hide-cursor"><i class="fa-solid fa-xmark"></i></div>
-									</div>
+  <div class="tt-contact-form-inner">
 
-									<div class="tt-contact-form-inner">
+    <div class="tt-form-group tt-anim-fadeinup">
+      <label>Votre Pseudo/Prénom <span class="required">*</span></label>
+      <input class="tt-form-control" type="text" name="name" placeholder="Pseudo ou Prénom" required>
+    </div>
 
-										<div class="tt-form-group tt-anim-fadeinup">
-											<label>Votre Pseudo/Prénom <span class="required">*</span></label>
-											<input class="tt-form-control" type="text" name="name"
-												placeholder="Pseudo ou Prénom" required>
-										</div>
+    <div class="tt-form-group tt-anim-fadeinup">
+      <label>Votre email <span class="required">*</span></label>
+      <input class="tt-form-control" type="email" name="email" placeholder="example@gmail.com" required>
+    </div>
 
-										<div class="tt-form-group tt-anim-fadeinup">
-											<label>Votre email <span class="required">*</span></label>
-											<input class="tt-form-control" type="email" name="email"
-												placeholder="example@gmail.com" required>
-										</div>
+    <div class="tt-form-group tt-anim-fadeinup">
+      <label>Pourquoi nous contacter&nbsp;?</label>
+      <select class="tt-form-control" name="reason[]" size="8" multiple>
+        <option value="Valorant">Valorant</option>
+        <option value="Valorant GC">Valorant GC</option>
+        <option value="Événements / LAN">Événements / LAN</option>
+        <option value="Stages">Stages</option>
+        <option value="Collaboration">Collaboration</option>
+        <option value="Partenariat">Partenariat</option>
+        <option value="Support technique">Support technique</option>
+        <option value="Suggestions">Suggestions</option>
+        <option value="Autres">Autres</option>
+      </select>
+    </div>
 
-										<div class="tt-form-group tt-anim-fadeinup">
-											<label>Pourquoi nous contacter&nbsp;?</label>
-											<select class="tt-form-control" name="reason[]" size="8" multiple>
-												<option value="" disabled>Choisissez une option</option>
-												<option value="Valorant">Valorant</option>
-												<option value="Valorant GC">Valorant GC</option>
-												<option value="Événements / LAN">Événements / LAN</option>
-												<option value="Stages">Stages</option>
-												<option value="Collaboration">Collaboration</option>
-												<option value="Partenariat">Partenariat</option>
-												<option value="Support technique">Support technique</option>
-												<option value="Suggestions">Suggestions</option>
-												<option value="Autres">Autres</option>
-											</select>
-										</div>
+    <div class="tt-form-group tt-anim-fadeinup">
+      <label>Votre message <span class="required">*</span></label>
+      <textarea class="tt-form-control" rows="5" name="message" placeholder="En quoi pouvons-nous vous aider ?" required></textarea>
+    </div>
 
+    <div class="tt-anim-fadeinup">
+      <button type="submit" class="tt-btn tt-btn-primary tt-magnetic-item">
+        <span data-hover="Envoyer">Postuler</span>
+      </button>
+    </div>
 
+  </div>
 
-										<div class="tt-form-group tt-anim-fadeinup">
-											<label>Votre message <span class="required">*</span></label>
-											<textarea class="tt-form-control" rows="5" name="message"
-												placeholder="En quoi pouvons-nous vous aider ?" required></textarea>
-										</div>
+</form>
 
-										<div class="tt-anim-fadeinup">
-											<button type="submit" class="tt-btn tt-btn-primary tt-magnetic-item">
-												<span data-hover="Envoyer">Postuler</span>
-											</button>
-										</div>
-
-									</div>
-
-								</form>
 
 
 
