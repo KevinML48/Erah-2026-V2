@@ -37,7 +37,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Préchargement police critique -->
-  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJLmv1pVF9eO.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Big+Shoulders+Display:wght@100..900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- CSS principaux (chargement asynchrone) -->
   <link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -64,6 +64,79 @@
     gtag('config', 'G-H9C6F8VG4D', { 'anonymize_ip': true });
   </script>
 </head>
+
+<style>
+	/* Bandeau cookies stylé */
+#cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 480px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 10000;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Boutons stylés */
+#cookie-banner button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+#cookie-banner button#accept-cookies {
+  background: #4CAF50;
+  color: #fff;
+}
+
+#cookie-banner button#accept-cookies:hover {
+  transform: scale(1.05);
+  background: #45a049;
+}
+
+#cookie-banner button#reject-cookies {
+  background: #f44336;
+  color: #fff;
+}
+
+#cookie-banner button#reject-cookies:hover {
+  transform: scale(1.05);
+  background: #d7372a;
+}
+
+@media (max-width: 500px) {
+  #cookie-banner div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* espace vertical entre les boutons */
+    width: 100%;
+  }
+  #cookie-banner div button {
+    width: 100%; /* boutons plein largeur sur mobile */
+  }
+}
+</style>
 
 
 <body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll">
@@ -225,10 +298,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755734553/conf%C3%A9rence-vid%C3%A9o_b8tg1s.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/conference-video-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/conference-video-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/conference-video-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/conference-video-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 									</div>
 									<div class="tt-posl-item-caption">
@@ -261,10 +334,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755734553/intervention_phjkqf.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/intervention-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/intervention-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/intervention-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/intervention-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 
 									</div>
@@ -298,10 +371,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755734559/recap-mw3_oa9haq.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/recap-mw3-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/recap-mw3-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/recap-mw3-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/recap-mw3-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 
 									</div>
@@ -335,10 +408,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755734568/Pr%C3%A9sentation_neswer.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/Présentation-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/Presentation-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/Présentation-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/Presentation-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 									</div>
 									<div class="tt-posl-item-caption">
@@ -371,10 +444,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755734609/HOPELAN_zhmylg.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/HOPELAN-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/HOPELAN-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/HOPELAN-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/HOPELAN-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 
 									</div>
@@ -408,10 +481,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755733729/InfinityUP_zers0o.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/InfinityUP-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/InfinityUP-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/InfinityUP-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/InfinityUP-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 
 									</div>
@@ -445,10 +518,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755734559/bootcamp-gc_hy1uxo.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/bootcamp-gc-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/bootcamp-gc-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/bootcamp-gc-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/bootcamp-gc-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 
 									</div>
@@ -482,10 +555,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755731458/erah-aca_m6cmjx.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/academie-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/academie-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/academie-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/academie-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 
 									</div>
@@ -519,10 +592,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755728769/interview-4_orynjt.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/hoplan-2024-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/hoplan-2024-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/hoplan-2024-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/hoplan-2024-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 
 									</div>
@@ -556,10 +629,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755728779/interview-2_ktx0sn.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/GA-2025-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/GA-2025-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/GA-2025-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/GA-2025-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 
 									</div>
@@ -593,10 +666,10 @@
   <source src="https://res.cloudinary.com/dzpvydfyw/video/upload/v1755728844/interview-3_s89dwz.webm" type="video/webm">
 
   <!-- Sous-titres en français -->
-  <track src="assets/vids/galerie-video/hoplan-2025-fr.vtt" kind="captions" srclang="fr" label="Français" default>
+  <track src="assets/vids/HOPELAN-fr.vtt" kind="captions" srclang="fr" label="Français" default>
 
   <!-- Optionnel : sous-titres en anglais -->
-  <track src="assets/vids/galerie-video/hoplan-2025-en.vtt" kind="captions" srclang="en" label="English">
+  <track src="assets/vids/HOPELAN-en.vtt" kind="captions" srclang="en" label="English">
 </video>
 
 									</div>
@@ -691,6 +764,7 @@
 	<script src="assets/vendor/fancybox/js/fancybox.umd.js" defer></script>
 	<script src="assets/vendor/swiper/js/swiper-bundle.min.js" defer></script>
 	<script src="assets/js/theme.js" defer></script>
+	<script src="assets/js/cookies.js" defer></script>
 
 
 

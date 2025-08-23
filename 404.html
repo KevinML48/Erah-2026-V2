@@ -36,7 +36,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Big+Shoulders+Display:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Préchargement police critique -->
-  <link rel="preload" as="font" href="https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJLmv1pVF9eO.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Big+Shoulders+Display:wght@100..900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- CSS principaux (chargement asynchrone) -->
   <link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -63,6 +63,79 @@
     gtag('config', 'G-H9C6F8VG4D', { 'anonymize_ip': true });
   </script>
 </head>
+
+<style>
+	/* Bandeau cookies stylé */
+#cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 480px;
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 10000;
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 0.6s forwards;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Boutons stylés */
+#cookie-banner button {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+#cookie-banner button#accept-cookies {
+  background: #4CAF50;
+  color: #fff;
+}
+
+#cookie-banner button#accept-cookies:hover {
+  transform: scale(1.05);
+  background: #45a049;
+}
+
+#cookie-banner button#reject-cookies {
+  background: #f44336;
+  color: #fff;
+}
+
+#cookie-banner button#reject-cookies:hover {
+  transform: scale(1.05);
+  background: #d7372a;
+}
+
+@media (max-width: 500px) {
+  #cookie-banner div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* espace vertical entre les boutons */
+    width: 100%;
+  }
+  #cookie-banner div button {
+    width: 100%; /* boutons plein largeur sur mobile */
+  }
+}
+</style>
 
 
 <body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll">
@@ -221,101 +294,90 @@
 
 			</div>
 
-			<footer id="tt-footer" class="border-top">
-				<div class="tt-footer-inner tt-wrap">
+		<footer id="tt-footer" class="border-top">
+			<div class="tt-footer-inner tt-wrap">
 
-					<div class="tt-row">
-						<div class="tt-col-xl-3 tt-col-sm-6">
-							<div class="tt-footer-widget">
-								<h5 class="tt-footer-widget-heading">Support</h5>
-								<ul class="tt-footer-widget-list">
-									<li><a href="https://www.vlr.gg/team/18024/erah-esport" class="tt-link"
-											target="_blank" rel="noopener">Page VLR</a></li>
-									<li><a href="https://tracker.gg/valorant/premier/teams/f698836f-cfac-4872-bf2f-9bfaaeeefc25/matches"
-											class="tt-link" target="_blank" rel="noopener">Ligue Invite</a></li>
-									<li><a href="https://discord.gg/9G89kkSjRx" class="tt-link" target="_blank"
-											rel="noopener">Discord</a></li>
-									<li><a href="https://www.linkedin.com/company/erah-association/" class="tt-link"
-											target="_blank" rel="noopener">LinkedIn</a></li>
-								</ul>
-							</div>
-						</div>
+				<div class="tt-row">
+					<div class="tt-col-xl-3 tt-col-sm-6">
+						<div class="tt-footer-widget">
+							<h5 class="tt-footer-widget-heading">Support</h5>
+							<ul class="tt-footer-widget-list">
+								<li><a href="https://www.vlr.gg/team/18024/erah-esport" class="tt-link" target="_blank"
+										rel="noopener">Page VLR</a></li>
+								<li><a href="https://tracker.gg/valorant/premier/teams/f698836f-cfac-4872-bf2f-9bfaaeeefc25/matches"
+										class="tt-link" target="_blank" rel="noopener">Ligue Invite</a></li>
+								<li><a href="https://discord.gg/9G89kkSjRx" class="tt-link" target="_blank"
+										rel="noopener">Discord</a></li>
+								<li><a href="https://www.linkedin.com/company/erah-association/" class="tt-link"
+										target="_blank" rel="noopener">LinkedIn</a></li>
 
-						<div class="tt-col-xl-3 tt-col-sm-6">
-							<div class="tt-footer-widget">
-								<h5 class="tt-footer-widget-heading">Plan du site</h5>
-								<ul class="tt-footer-widget-list">
-									<li><a href="about.html" class="tt-link">À propos</a></li>
-									<li><a href="galerie-photos.html" class="tt-link">Galerie Photos</a></li>
-									<li><a href="mende.html" class="tt-link">Mende</a></li>
-									<li><a href="contact.html" class="tt-link">Contact</a></li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="tt-col-xl-3 tt-col-sm-6">
-							<div class="tt-footer-widget">
-								<h5 class="tt-footer-widget-heading">Contact</h5>
-								<ul class="tt-footer-widget-list">
-									<li>
-										<a href="https://maps.app.goo.gl/MTiizsoAEUrp7NpZ6" class="tt-link"
-											target="_blank" rel="nofollow noopener">Mende, 48000</a>
-									</li>
-									<li><a href="mailto:erah.association@gmail.com"
-											class="tt-link">erah.association@gmail.com</a></li>
-									<li><a href="tel:+33649425578" class="tt-link"> +(33) 06 49 42 55 78</a></li>
-									<li>
-										<div class="tt-social-buttons">
-											<ul>
-												<li><a href="https://www.twitch.tv/erah_association"
-														class="tt-magnetic-item" target="_blank" rel="noopener"><i
-															class="fa-brands fa-twitch"></i></a></li>
-												<li><a href="https://www.instagram.com/erahesport/"
-														class="tt-magnetic-item" target="_blank" rel="noopener"><i
-															class="fa-brands fa-instagram"></i></a></li>
-												<li><a href="https://x.com/ErahEsport" class="tt-magnetic-item"
-														target="_blank" rel="noopener"><i
-															class="fa-brands fa-twitter"></i></a></li>
-												<li><a href="https://discord.gg/9G89kkSjRx" class="tt-magnetic-item"
-														target="_blank" rel="noopener"><i
-															class="fa-brands fa-discord"></i></a></li>
-
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-
-						<div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end">
-							<div class="tt-footer-widget">
-								<ul class="tt-footer-widget-list">
-									<li>
-
-										<div class="tt-footer-logo">
-											<a href="index.html" class="tt-magnetic-item">
-												<img src="https://res.cloudinary.com/dzpvydfyw/image/upload/v1755729215/logo_ef3poq.png" class="tt-logo-light"
-													loading="lazy" alt="Logo">
-												<img src="https://res.cloudinary.com/dzpvydfyw/image/upload/v1755729215/logo_ef3poq.png" class="tt-logo-dark" loading="lazy"
-													alt="Logo">
-											</a>
-										</div>
-									</li>
-									<li>
-										<div class="tt-footer-copyright">
-											© <span class="tt-copyright-year"></span> <a href="https://erah-esport.fr/"
-												class="tt-link" target="_blank" rel="nofollow noopener"> Erah
-												Esport</a><br>
-											All Rights Reserved
-										</div>
-									</li>
-								</ul>
-							</div>
+                                <li><a href="mentions-legales.html" class="tt-link">Mentions Légales</a></li>
+							</ul>
 						</div>
 					</div>
+<div class="tt-col-xl-3 tt-col-sm-6">
+          <div class="tt-footer-widget">
+            <h5 class="tt-footer-widget-heading">Sitemap</h5>
+            <ul class="tt-footer-widget-list">
+              <li><a href="about.html" class="tt-link">A propos</a></li>
+              <li><a href="galerie-photos.html" class="tt-link">Galerie Photo</a></li>
+              <li><a href="mende.html" class="tt-link">Mende</a></li>
+              <li><a href="contact.html" class="tt-link">Contact</a></li>
+              <li><a href="#" id="manage-cookies" class="tt-link">Gérer mes cookies</a></li>
+            </ul>
+          </div>
+        </div>
 
+					<div class="tt-col-xl-3 tt-col-sm-6">
+						<div class="tt-footer-widget">
+							<h5 class="tt-footer-widget-heading">Contact</h5>
+							<ul class="tt-footer-widget-list">
+								<li>
+									<a href="https://maps.app.goo.gl/MTiizsoAEUrp7NpZ6" class="tt-link" target="_blank"
+										rel="nofollow noopener">Mende, 48000</a>
+								</li>
+								<li><a href="mailto:erah.association@gmail.com"
+										class="tt-link">erah.association@gmail.com</a></li>
+								<li><a href="tel:+33649425578" class="tt-link"> +(33) 06 49 42 55 78</a></li>
+								<li>
+									<div class="tt-social-buttons">
+										<ul>
+											<li><a href="https://www.twitch.tv/erah_association"
+													class="tt-magnetic-item" target="_blank" rel="noopener" aria-label="Twitch ERAH Esport"><i
+														class="fa-brands fa-twitch"></i></a></li>
+											<li><a href="https://www.instagram.com/erahesport/" class="tt-magnetic-item"
+													target="_blank" rel="noopener" aria-label="Instagram ERAH Esport"><i
+														class="fa-brands fa-instagram"></i></a></li>
+											<li><a href="https://x.com/ErahEsport" class="tt-magnetic-item"
+													target="_blank" rel="noopener" aria-label="X ERAH Esport"><i
+														class="fa-brands fa-twitter"></i></a></li>
+											<li><a href="https://discord.gg/9G89kkSjRx" class="tt-magnetic-item"
+													target="_blank" rel="noopener" aria-label="Discord ERAH Esport"><i
+														class="fa-brands fa-discord"></i></a></li>
+
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="tt-col-xl-3 tt-col-sm-6 tt-justify-content-xl-end">
+						<div class="tt-footer-widget">
+							<ul class="tt-footer-widget-list">
+								<li>
+									<div class="tt-footer-logo">
+										<a href="index.html" class="tt-magnetic-item">
+											<img src="https://res.cloudinary.com/dzpvydfyw/image/upload/v1755729215/logo_ef3poq.png" class="tt-logo-light" loading="lazy"
+												alt="Logo"> <img src="https://res.cloudinary.com/dzpvydfyw/image/upload/v1755729215/logo_ef3poq.png" class="tt-logo-dark"
+												loading="lazy" alt="Logo"> </a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</footer>
+			</div>
+		</footer>
 
 			<a href="#" class="tt-scroll-to-top">
 				<div class="tt-stt-progress tt-magnetic-item">
@@ -344,6 +406,7 @@
 	<script src="assets/vendor/fancybox/js/fancybox.umd.js" defer></script>
 	<script src="assets/vendor/swiper/js/swiper-bundle.min.js" defer></script>
 	<script src="assets/js/theme.js" defer></script>
+	<script src="assets/js/cookies.js" defer></script>
 
 
 
