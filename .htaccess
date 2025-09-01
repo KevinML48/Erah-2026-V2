@@ -1,3 +1,6 @@
+# Forcer UTF-8 pour gérer les caractères accentués
+AddDefaultCharset UTF-8
+
 ## EXPIRES CACHING ##
 <IfModule mod_expires.c>
 ExpiresActive On
@@ -27,18 +30,18 @@ AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 ## Enable compression ##
 
-# Supprimer .html des URLs
+# Supprimer .html des URLs et gérer les accents
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
 
-  # Rediriger les .html vers l'URL sans extension
-  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
-  RewriteRule ^ %1 [R=301,L]
+  # Rediriger les .html vers l'URL sans extension (évite le contenu dupliqué)
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^\s]+)\.html [NC]
+  RewriteRule ^ %1 [R=301,L,NE]
 
   # Réécrire les URLs sans extension vers le fichier .html correspondant
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME}.html -f
-  RewriteRule ^(.*)$ $1.html [L]
+  RewriteRule ^(.+)$ $1.html [L,NE]
 </IfModule>
