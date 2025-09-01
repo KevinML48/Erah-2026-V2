@@ -15,7 +15,6 @@ ExpiresDefault "access 1 month"
 </IfModule>
 ## EXPIRES CACHING ##
 
-
 ## Enable compression ##
 AddOutputFilterByType DEFLATE text/plain
 AddOutputFilterByType DEFLATE text/html
@@ -31,9 +30,15 @@ AddOutputFilterByType DEFLATE application/x-javascript
 # Supprimer .html des URLs
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  
-  # Si l'URL correspond à un fichier .html existant, on le réécrit sans l'extension
+  RewriteBase /
+
+  # Rediriger les .html vers l'URL sans extension
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.html [NC]
+  RewriteRule ^ %1 [R=301,L]
+
+  # Réécrire les URLs sans extension vers le fichier .html correspondant
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME}\.html -f
-  RewriteRule ^([^/]+)$ $1.html [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
 </IfModule>
