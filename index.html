@@ -1582,21 +1582,6 @@
 
 	</main>
 
-
-	<!-- Lazyload vidéo hero -->
-	<script defer>
-	  window.addEventListener("load", () => {
-	    const video = document.getElementById("hero-video");
-	    if(video){
-	      const source = document.createElement("source");
-	      source.src = "https://3iggo4ej8b.ucarecd.net/3b020a48-cc77-4d9b-9a27-a3235c25298d/Trailersite.mp4"; // version optimisée < 2Mo
-	      source.type = "video/mp4";
-	      video.appendChild(source);
-	      video.load();
-	    }
-	  });
-	</script>
-
 	<!-- Librairies JS -->
 	<script src="assets/vendor/jquery/jquery.min.js" defer></script>
 	<script src="assets/vendor/gsap/gsap.min.js" defer></script>
