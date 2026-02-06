@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+	<!-- Titre et SEO -->
+	<title>Galerie Vidéo | ERAH Esport</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description"
+		content="Découvrez la galerie vidéo d’ERAH Esport : replays de compétitions, aftermovies, highlights et moments forts de nos événements gaming.">
+	<meta name="keywords"
+		content="Galerie vidéo ERAH Esport, vidéos esport, replays tournois, highlights gaming, aftermovie esport, compétitions ERAH, vidéos gaming Lozère">
+	<meta name="author" content="ERAH Esport">
+
+
+	<!-- Favicon -->
+	<link rel="icon" href="/assets/img/logo.png"
+		type="image/png" sizes="512x512">
+	<link rel="apple-touch-icon" href="/assets/img/logo.png">
+
+	<!-- Schema.org pour Google -->
+	<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ERAH Esport",
+    "url": "https://erah-esport.fr",
+    "logo": "/assets/img/logo.png",
+    "sameAs": [
+      "https://www.twitch.tv/erah_association",
+      "https://www.instagram.com/erahesport/",
+      "https://x.com/ErahEsport",
+      "https://discord.gg/9G89kkSjRx"
+    ]
+  }
+  </script>
+
+	<!-- Préconnexion & polices Google -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Big+Shoulders+Display:wght@100..900&display=swap"
+		rel="stylesheet">
+
+	<!-- CSS critiques (appliqués immédiatement) -->
+	<link rel="stylesheet" href="assets/css/helper.css">
+	<link rel="stylesheet" href="assets/css/theme.css">
+	<link rel="stylesheet" href="assets/css/theme-light.css">
+
+	<!-- Préchargement CSS moins critiques -->
+	<link rel="preload" href="assets/vendor/fontawesome/css/all.min.css" as="style"
+		onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="assets/vendor/fancybox/css/fancybox.css" as="style"
+		onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="preload" href="assets/vendor/swiper/css/swiper-bundle.min.css" as="style"
+		onload="this.onload=null;this.rel='stylesheet'">
+	<noscript>
+		<link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+		<link rel="stylesheet" href="assets/vendor/fancybox/css/fancybox.css">
+		<link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css">
+	</noscript>
+
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-H9C6F8VG4D"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'G-H9C6F8VG4D', { 'anonymize_ip': true });
+	</script>
+</head>
+
+<style>
+	/* Bandeau cookies stylé */
+	#cookie-banner {
+		position: fixed;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: 480px;
+		background: rgba(0, 0, 0, 0.9);
+		color: #fff;
+		padding: 20px;
+		border-radius: 12px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
+		z-index: 10000;
+		font-family: 'Arial', sans-serif;
+		font-size: 14px;
+		text-align: center;
+		opacity: 0;
+		animation: fadeIn 0.6s forwards;
+	}
+
+	/* Animation */
+	@keyframes fadeIn {
+		to {
+			opacity: 1;
+		}
+	}
+
+	/* Boutons stylés */
+	#cookie-banner button {
+		border: none;
+		padding: 10px 18px;
+		border-radius: 8px;
+		font-weight: bold;
+		cursor: pointer;
+		transition: transform 0.2s, background 0.2s;
+	}
+
+	#cookie-banner button#accept-cookies {
+		background: #4CAF50;
+		color: #fff;
+	}
+
+	#cookie-banner button#accept-cookies:hover {
+		transform: scale(1.05);
+		background: #45a049;
+	}
+
+	#cookie-banner button#reject-cookies {
+		background: #f44336;
+		color: #fff;
+	}
+
+	#cookie-banner button#reject-cookies:hover {
+		transform: scale(1.05);
+		background: #d7372a;
+	}
+
+	@media (max-width: 500px) {
+		#cookie-banner div {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			/* espace vertical entre les boutons */
+			width: 100%;
+		}
+
+		#cookie-banner div button {
+			width: 100%;
+			/* boutons plein largeur sur mobile */
+		}
+	}
+</style>
+
+
+<body id="body" class="tt-transition tt-noise tt-magic-cursor tt-smooth-scroll">
+
+	<main id="body-inner">
+
+		<div id="tt-page-transition">
+			<div class="tt-ptr-overlay-top tt-noise"></div>
+			<div class="tt-ptr-overlay-bottom tt-noise"></div>
+			<div class="tt-ptr-preloader">
+				<div class="tt-ptr-prel-content">
+
+					<img src="/assets/img/logo.png"
+						class="tt-ptr-prel-image" alt="Logo">
+				</div>
+			</div>
+		</div>
+
+		<div id="magic-cursor">
+			<div id="ball"></div>
+		</div>
+
+		<header id="tt-header" class="tt-header-alter tt-header-scroll tt-header-filled">
+			<div class="tt-header-inner tt-noise">
+
+				<div class="tt-header-col tt-header-col-left">
+
+					<div class="tt-logo">
+						<a href="index.html" class="tt-magnetic-item">
+							<img src="/assets/img/logo.png"
+								class="tt-logo-light" alt="Logo">
+							<img src="/assets/img/logo.png"
+								class="tt-logo-dark" alt="Logo">
+						</a>
+					</div>
+
+
+				</div>
+
+				<div class="tt-header-col tt-header-col-center">
+
+					<nav class="tt-main-menu tt-m-menu-center">
+						<div class="tt-main-menu-holder">
+							<div class="tt-main-menu-inner">
+								<div class="tt-main-menu-content">
+
+
+									<ul class="tt-main-menu-list">
+
+										<li><a href="index.html">Accueil</a></li>
+
+										<li><a href="about.html">A propos</a></li>
+
+										<li><a href="boutique.html">Boutique</a></li>
+
+										<li class="tt-submenu-wrap tt-submenu-master">
+											<div class="tt-submenu-trigger">
+												<a href="#">Équipes</a>
+											</div>
+											<div class="tt-submenu">
+												<ul class="tt-submenu-list">
+
+													<li><a href="valorant-VCL.html">Valorant VCL</a></li>
+													<li><a href="staff.html">Staff ERAH</a></li>
+													<li><a href="medical.html">Médical</a></li>
+
+												</ul>
+											</div>
+										</li>
+
+										<li class="tt-submenu-wrap tt-submenu-master">
+											<div class="tt-submenu-trigger">
+												<a href="#">Contenu</a>
+											</div>
+											<div class="tt-submenu">
+												<ul class="tt-submenu-list">
+
+													<li><a href="galerie-photos.html">Galerie Photo</a></li>
+													<li><a href="galerie-video.html">Galerie Vidéo</a></li>
+													<li><a href="evenement.html">Nos événements</a></li>
+													<li><a href="nos-stages.html">Nos stages</a></li>
+
+												</ul>
+											</div>
+										</li>
+
+
+										<li><a href="mende.html">Mende</a></li>
+
+										<li><a href="contact.html">Postuler</a></li>
+
+									</ul>
+
+
+								</div>
+							</div>
+						</div>
+
+					</nav>
+
+
+				</div>
+
+				<div class="tt-header-col tt-header-col-right">
+
+
+					<div id="tt-m-menu-toggle-btn-wrap">
+						<div class="tt-m-menu-toggle-btn-text">
+							<span class="tt-m-menu-text-menu">Menu</span>
+							<span class="tt-m-menu-text-close">Close</span>
+						</div>
+						<div class="tt-m-menu-toggle-btn-holder">
+							<a href="#" class="tt-m-menu-toggle-btn" aria-label="Ouvrir le menu">
+								<span></span>
+							</a>
+
+						</div>
+					</div>
+
+
+
+					<a href="boutique.html" class="tt-btn tt-btn-secondary hide-from-xlg tt-magnetic-item">
+						<span data-hover="Boutique">Boutique</span>
+					</a>
+
+
+
+					<div class="tt-style-switch">
+						<div class="tt-style-switch-inner tt-magnetic-item">
+							<div class="tt-stsw-light">
+								<i class="fas fa-sun"></i>
+							</div>
+							<div class="tt-stsw-dark">
+								<i class="fas fa-moon"></i>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</header>
+
+		<div id="tt-content-wrap">
+
+
+			<div id="tt-page-content">
+
+
+				<div class="tt-portfolio-slider cursor-drag-mouse-down" data-direction="vertical" data-speed="1000"
+					data-mousewheel="true" data-keyboard="true" data-simulate-touch="true" data-parallax="true"
+					data-loop="true">
+
+					<div class="swiper">
+
+						<div class="swiper-wrapper">
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/Presentation ERAH.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/Presentation ERAH.webm"
+												type="video/webm">
+										</video>
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/MCh7wI7gMOU"
+														data-cursor="Voir<br>la vidéo">Présentation</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">Club</div>
+												</div>
+												<a href="https://youtu.be/MCh7wI7gMOU"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/merci-VCL - Trim.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/merci-VCL - Trim.webm"
+												type="video/webm">
+										</video>
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/gfKDIPuq2JY"
+														data-cursor="Voir<br>la vidéo">VCL Split 1 2026</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">Valorant</div>
+												</div>
+												<a href="https://youtu.be/gfKDIPuq2JY"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/interview-GA-2025.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/interview-GA-2025.webm"
+												type="video/webm">
+										</video>
+
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/n_LEo-tp3Jk"
+														data-cursor="Voir<br>la vidéo">Interview</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">LAN</div>
+												</div>
+												<a href="https://youtu.be/n_LEo-tp3Jk"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/interview-HopLan-2025.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/interview-HopLan-2025.webm"
+												type="video/webm">
+										</video>
+
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/6-ebq2tKpAs"
+														data-cursor="Voir<br>la vidéo">HopLan 2025</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">LAN</div>
+												</div>
+												<a href="https://youtu.be/6-ebq2tKpAs"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/Video InfinityUP presentation.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/Video InfinityUP presentation.webm"
+												type="video/webm">
+										</video>
+
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/7IxK35ld2Pg"
+														data-cursor="Voir<br>la vidéo">InfinityUP</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">Event</div>
+												</div>
+												<a href="https://youtu.be/7IxK35ld2Pg"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/interview-HopLan-2024.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/interview-HopLan-2024.webm"
+												type="video/webm">
+										</video>
+
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/I1o44CVvCFA"
+														data-cursor="Voir<br>la vidéo">HopLan 2024</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">LAN</div>
+												</div>
+												<a href="https://youtu.be/I1o44CVvCFA"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/interview-GA-2025.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/interview-GA-2025.webm"
+												type="video/webm">
+										</video>
+
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/I1o44CVvCFA?si=AQtilTw4pJRt3kJu"
+														data-cursor="Voir<br>la vidéo">Gamers Assembly 2025</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">LAN</div>
+												</div>
+												<a href="https://youtu.be/I1o44CVvCFA?si=AQtilTw4pJRt3kJu"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/bootcamp feminin.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/bootcamp feminin.webm"
+												type="video/webm">
+										</video>
+
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/80qtJPHgmqY"
+														data-cursor="Voir<br>la vidéo">Bootcamp GC</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">Esport</div>
+												</div>
+												<a href="https://youtu.be/80qtJPHgmqY"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/Interview_Equipe_Rocket-league - Trim.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/Interview_Equipe_Rocket-league - Trim.webm"
+												type="video/webm">
+										</video>
+
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/mWA_KWJfFU0"
+														data-cursor="Voir<br>la vidéo">LAN TGF</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">Esport</div>
+												</div>
+												<a href="https://youtu.be/mWA_KWJfFU0"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/interview-LyonEsport.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/interview-LyonEsport.webm"
+												type="video/webm">
+										</video>
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtube.com/shorts/5TNjRatspIc?feature=share"
+														data-cursor="Voir<br>la vidéo">Interview</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">Lyon Esport</div>
+												</div>
+												<a href="https://youtube.com/shorts/5TNjRatspIc?feature=share"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png">
+											<source
+												src="/assets/vids/Retour Yusoh (1).mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/Retour Yusoh (1).webm"
+												type="video/webm">
+										</video>
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="tt-btn tt-btn-secondary hide-to-mobile margin-top-60"
+														data-cursor="Voir<br>la vidéo">Conférence</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">Événement</div>
+												</div>
+												<a href="https://youtu.be/iXSCfTEAs_0"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="/assets/img/logo-fond.png"
+											type="video/mp4">
+											<source
+												src="/assets/vids/PYUSOH 1 - Trim.mp4"
+												type="video/webm">
+											<source
+												src="/assets/vids/PYUSOH 1 - Trim.webm"
+												type="video/webm">
+										</video>
+
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/iXSCfTEAs_0"
+														data-cursor="Voir<br>la vidéo">Intervention</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">Talk</div>
+												</div>
+												<a href="https://youtu.be/iXSCfTEAs_0"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="swiper-slide">
+								<div class="tt-portfolio-slider-item" data-swiper-parallax="50%">
+									<div class="tt-posl-image-wrap cover-opacity-2">
+										<video class="tt-posl-video" loop muted preload="metadata"
+											poster="https://3iggo4ej8b.ucarecd.net/e5e887f0-83f2-42a3-8e0a-aa989571f61e/pp2.png">
+											<source
+												src="/assets/vids/recap mw3 - Trim.mp4"
+												type="video/mp4">
+											<source
+												src="/assets/vids/recap mw3 - Trim.webm"
+												type="video/webm">
+										</video>
+
+									</div>
+									<div class="tt-posl-item-caption">
+										<div class="tt-posl-item-caption-outer" data-swiper-parallax="100%">
+											<div class="tt-posl-item-caption-inner">
+												<h2 class="tt-posl-item-title">
+													<a href="https://youtu.be/KTYwsLZNBqA"
+														data-cursor="Voir<br>la vidéo">Recap MW3</a>
+												</h2>
+												<div class="tt-posl-item-categories-wrap">
+													<div class="tt-posl-item-category">Esport</div>
+												</div>
+												<a href="https://youtu.be/KTYwsLZNBqA"
+													class="tt-btn tt-btn-secondary hide-to-mobile margin-top-60">
+													<span data-hover="Voir la vidéo">Voir la vidéo</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+
+					</div>
+
+					<div class="tt-portfolio-slider-navigation">
+						<div class="tt-posl-nav-prev">
+							<div class="tt-posl-nav-arrow tt-magnetic-item">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path
+										d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+									</path>
+								</svg>
+							</div>
+						</div>
+						<div class="tt-posl-nav-next">
+							<div class="tt-posl-nav-arrow tt-magnetic-item">
+								<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									<path
+										d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z">
+									</path>
+								</svg>
+							</div>
+						</div>
+					</div>
+
+					<div class="tt-posl-pagination tt-hide-cursor"></div>
+
+					<div class="tt-social-buttons">
+						<ul>
+							<li><a href="https://www.twitch.tv/erah_association" class="tt-magnetic-item"
+									target="_blank" rel="noopener"><i class="fa-brands fa-twitch"></i></a></li>
+							<li><a href="https://www.instagram.com/erahesport/" class="tt-magnetic-item" target="_blank"
+									rel="noopener"><i class="fa-brands fa-instagram"></i></a></li>
+							<li><a href="https://x.com/ErahEsport" class="tt-magnetic-item" target="_blank"
+									rel="noopener"><i class="fa-brands fa-twitter"></i></a></li>
+							<li><a href="https://discord.gg/9G89kkSjRx" class="tt-magnetic-item" target="_blank"
+									rel="noopener"><i class="fa-brands fa-discord"></i></a></li>
+
+						</ul>
+					</div>
+
+
+				</div>
+
+
+
+			</div>
+
+
+		</div>
+
+
+
+	</main>
+
+
+
+
+
+	<script src="assets/vendor/jquery/jquery.min.js" defer></script>
+	<script src="assets/vendor/gsap/gsap.min.js" defer></script>
+	<script src="assets/vendor/gsap/ScrollToPlugin.min.js" defer></script>
+	<script src="assets/vendor/gsap/ScrollTrigger.min.js" defer></script>
+	<script src="assets/vendor/lenis.min.js" defer></script>
+	<script src="assets/vendor/isotope/imagesloaded.pkgd.min.js" defer></script>
+	<script src="assets/vendor/isotope/isotope.pkgd.min.js" defer></script>
+	<script src="assets/vendor/isotope/packery-mode.pkgd.min.js" defer></script>
+	<script src="assets/vendor/fancybox/js/fancybox.umd.js" defer></script>
+	<script src="assets/vendor/swiper/js/swiper-bundle.min.js" defer></script>
+	<script src="assets/js/theme.js" defer></script>
+	<script src="assets/js/cookies.js" defer></script>
+
+
+
+</body>
+
+</html>
